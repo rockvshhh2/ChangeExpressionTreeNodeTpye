@@ -36,7 +36,7 @@ namespace ExpressionLab
             var a1 = GetDatas<BaseTable>("A", x => x.Id == 1 && x.Name == "David");
 
             //新版
-            var b = db.B.Where(x => x.Id == 1).Where(x => x.Name.Contains("D")).OrderByDescending(x => x.Name).ToDynamicTableDatas("A", db);
+            var b = db.B.Where(x => x.Id == 1).Where(x => x.Name == "David").OrderByDescending(x => x.Name).ToDynamicTableDatas("A", db);
         }
 
         class BaseTable
